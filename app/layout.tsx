@@ -1,14 +1,15 @@
 import "./globals.css";
 import type { Metadata } from "next";
 
+const siteUrl = "https://flightvslight.com";
+const siteTitle = "FlightVsLight";
+const siteDescription = "See your flight vs daylight and night";
+const socialImage = `${siteUrl}/og-image.png`;
+
 export const metadata: Metadata = {
-  metadataBase: new URL("https://flightvslight.com"),
-  title: {
-    default: "FlightVsLight - See Daylight and Darkness Along Your Flight",
-    template: "%s | FlightVsLight",
-  },
-  description:
-    "Plan flights around daylight, darkness, twilight, time zones, and route direction with a fast visual flight-light map.",
+  metadataBase: new URL(siteUrl),
+  title: siteTitle,
+  description: siteDescription,
   keywords: [
     "flight daylight",
     "flight darkness",
@@ -24,23 +25,28 @@ export const metadata: Metadata = {
   creator: "FlightVsLight",
   publisher: "FlightVsLight",
   icons: {
-    icon: "/icon.svg",
-    shortcut: "/icon.svg",
-    apple: "/icon.svg",
+    icon: "/favicon.png",
   },
   openGraph: {
-    title: "FlightVsLight",
-    description:
-      "Visualize whether a flight is likely to be in daylight, twilight, night, or a mix of all three.",
-    url: "https://flightvslight.com",
-    siteName: "FlightVsLight",
+    title: siteTitle,
+    description: siteDescription,
+    url: siteUrl,
+    siteName: siteTitle,
     type: "website",
+    images: [
+      {
+        url: socialImage,
+        width: 1200,
+        height: 630,
+        alt: "FlightVsLight flight daylight and night preview",
+      },
+    ],
   },
   twitter: {
-    card: "summary",
-    title: "FlightVsLight",
-    description:
-      "See daylight, darkness, twilight, and time zones along a flight route.",
+    card: "summary_large_image",
+    title: siteTitle,
+    description: siteDescription,
+    images: [socialImage],
   },
 };
 
