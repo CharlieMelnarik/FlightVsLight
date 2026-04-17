@@ -1,0 +1,51 @@
+export type Aircraft = {
+  code: string;
+  label: string;
+  typicalCruiseKts: number;
+  aliases: string[];
+};
+
+export const AIRCRAFT: Aircraft[] = [
+  { code: "AT72", label: "ATR 72", typicalCruiseKts: 275, aliases: ["ATR72", "ATR 72-600", "turboprop"] },
+  { code: "DH8D", label: "De Havilland Dash 8 Q400", typicalCruiseKts: 360, aliases: ["Dash 8", "Q400", "DHC-8", "DH8D", "turboprop"] },
+  { code: "CRJ7", label: "Bombardier CRJ700", typicalCruiseKts: 447, aliases: ["CRJ 700", "Canadair Regional Jet 700"] },
+  { code: "CRJ9", label: "Bombardier CRJ900", typicalCruiseKts: 447, aliases: ["CRJ 900", "Canadair Regional Jet 900"] },
+  { code: "E170", label: "Embraer 170", typicalCruiseKts: 447, aliases: ["E-Jet", "E170"] },
+  { code: "E175", label: "Embraer 175", typicalCruiseKts: 447, aliases: ["E-Jet", "E175", "Embraer E175"] },
+  { code: "E190", label: "Embraer 190", typicalCruiseKts: 447, aliases: ["E-Jet", "E190", "Embraer E190"] },
+  { code: "E195", label: "Embraer 195-E2", typicalCruiseKts: 447, aliases: ["E195", "E195-E2", "Embraer E2"] },
+  { code: "BCS1", label: "Airbus A220-100", typicalCruiseKts: 470, aliases: ["A220", "A221", "Bombardier CSeries", "CS100"] },
+  { code: "BCS3", label: "Airbus A220-300", typicalCruiseKts: 470, aliases: ["A220", "A223", "Bombardier CSeries", "CS300"] },
+  { code: "A319", label: "Airbus A319", typicalCruiseKts: 447, aliases: ["A319ceo", "A319neo"] },
+  { code: "A320", label: "Airbus A320", typicalCruiseKts: 447, aliases: ["A320ceo", "A320neo", "A20N"] },
+  { code: "A321", label: "Airbus A321neo", typicalCruiseKts: 460, aliases: ["A321", "A21N", "A321neo", "A321LR", "A321XLR"] },
+  { code: "A332", label: "Airbus A330-200", typicalCruiseKts: 470, aliases: ["A330", "A330-200"] },
+  { code: "A333", label: "Airbus A330-300", typicalCruiseKts: 470, aliases: ["A330", "A330-300"] },
+  { code: "A339", label: "Airbus A330-900neo", typicalCruiseKts: 470, aliases: ["A330neo", "A330-900", "A339"] },
+  { code: "A343", label: "Airbus A340-300", typicalCruiseKts: 480, aliases: ["A340", "A340-300"] },
+  { code: "A359", label: "Airbus A350-900", typicalCruiseKts: 488, aliases: ["A350", "A350-900", "A359", "XWB"] },
+  { code: "A35K", label: "Airbus A350-1000", typicalCruiseKts: 488, aliases: ["A350", "A350-1000", "A35K", "XWB"] },
+  { code: "A388", label: "Airbus A380-800", typicalCruiseKts: 490, aliases: ["A380", "superjumbo"] },
+  { code: "B712", label: "Boeing 717-200", typicalCruiseKts: 447, aliases: ["717", "Boeing 717"] },
+  { code: "B737", label: "Boeing 737-700", typicalCruiseKts: 450, aliases: ["737", "737-700", "737NG"] },
+  { code: "B738", label: "Boeing 737-800", typicalCruiseKts: 450, aliases: ["737", "737-800", "738", "737NG"] },
+  { code: "B739", label: "Boeing 737-900ER", typicalCruiseKts: 450, aliases: ["737", "737-900", "739", "737NG"] },
+  { code: "B38M", label: "Boeing 737 MAX 8", typicalCruiseKts: 455, aliases: ["737 MAX", "737 MAX 8", "MAX 8", "7M8", "B38M"] },
+  { code: "B39M", label: "Boeing 737 MAX 9", typicalCruiseKts: 455, aliases: ["737 MAX", "737 MAX 9", "MAX 9", "7M9", "B39M"] },
+  { code: "B3XM", label: "Boeing 737 MAX 10", typicalCruiseKts: 455, aliases: ["737 MAX", "737 MAX 10", "MAX 10"] },
+  { code: "B744", label: "Boeing 747-400", typicalCruiseKts: 493, aliases: ["747", "747-400", "jumbo jet"] },
+  { code: "B748", label: "Boeing 747-8", typicalCruiseKts: 493, aliases: ["747", "747-8", "747-8i", "jumbo jet"] },
+  { code: "B752", label: "Boeing 757-200", typicalCruiseKts: 470, aliases: ["757", "757-200"] },
+  { code: "B753", label: "Boeing 757-300", typicalCruiseKts: 470, aliases: ["757", "757-300"] },
+  { code: "B763", label: "Boeing 767-300ER", typicalCruiseKts: 460, aliases: ["767", "767-300", "767-300ER"] },
+  { code: "B764", label: "Boeing 767-400ER", typicalCruiseKts: 460, aliases: ["767", "767-400", "767-400ER"] },
+  { code: "B772", label: "Boeing 777-200ER", typicalCruiseKts: 489, aliases: ["777", "777-200", "triple seven"] },
+  { code: "B77L", label: "Boeing 777-200LR", typicalCruiseKts: 489, aliases: ["777", "777-200LR", "triple seven"] },
+  { code: "B77W", label: "Boeing 777-300ER", typicalCruiseKts: 488, aliases: ["777", "777-300ER", "77W", "triple seven"] },
+  { code: "B778", label: "Boeing 777-8", typicalCruiseKts: 488, aliases: ["777X", "777-8"] },
+  { code: "B779", label: "Boeing 777-9", typicalCruiseKts: 488, aliases: ["777X", "777-9"] },
+  { code: "B788", label: "Boeing 787-8 Dreamliner", typicalCruiseKts: 488, aliases: ["787", "787-8", "Dreamliner"] },
+  { code: "B789", label: "Boeing 787-9 Dreamliner", typicalCruiseKts: 488, aliases: ["787", "787-9", "Dreamliner"] },
+  { code: "B78X", label: "Boeing 787-10 Dreamliner", typicalCruiseKts: 488, aliases: ["787", "787-10", "Dreamliner"] },
+  { code: "CONC", label: "Concorde", typicalCruiseKts: 1170, aliases: ["supersonic", "Aerospatiale BAC Concorde"] },
+];

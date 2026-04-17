@@ -1,0 +1,1 @@
+export function SectionCard({ title, children }: { title: string; children: React.ReactNode }) { return <div className="rounded-[28px] border border-slate-800 bg-slate-900 p-6 shadow-2xl"><h3 className="mb-3 text-xl font-semibold text-white">{title}</h3><div className="text-sm leading-7 text-slate-300 md:text-base">{children}</div></div>; }

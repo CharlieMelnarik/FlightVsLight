@@ -1,0 +1,5 @@
+import { normalizeLonDiff } from "./geo";
+export function solarDeclinationDegrees(utcMs:number){const start=Date.UTC(new Date(utcMs).getUTCFullYear(),0,0);const day=Math.floor((utcMs-start)/86400000);return 23.44*Math.sin(((2*Math.PI)/365)*(day-81));}
+export function solarSubLon(utcMs:number){return (((-15*((utcMs-Date.UTC(new Date(utcMs).getUTCFullYear(),new Date(utcMs).getUTCMonth(),new Date(utcMs).getUTCDate(),12,0,0))/3600000))%360)+540)%360-180;}
+export function solarAltitude(latDeg:number,lonDeg:number,subsolarLonDeg:number,declinationDeg:number){const lat=(latDeg*Math.PI)/180,dec=(declinationDeg*Math.PI)/180,hourAngle=(normalizeLonDiff(lonDeg-subsolarLonDeg)*Math.PI)/180;return Math.asin(Math.sin(lat)*Math.sin(dec)+Math.cos(lat)*Math.cos(dec)*Math.cos(hourAngle))*(180/Math.PI);}
+export function lightingLabel(latDeg:number,lonDeg:number,subsolarLonDeg:number,declinationDeg:number){const alt=solarAltitude(latDeg,lonDeg,subsolarLonDeg,declinationDeg);if(alt>0)return "Daylight";if(alt>-6)return "Civil twilight";if(alt>-12)return "Nautical twilight";if(alt>-18)return "Astronomical twilight";return "Night";}

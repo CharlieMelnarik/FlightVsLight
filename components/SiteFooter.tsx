@@ -1,0 +1,2 @@
+import Link from "next/link";
+export function SiteFooter(){return <footer className="mt-10 border-t border-slate-800"><div className="mx-auto flex max-w-7xl flex-col gap-3 px-6 py-8 text-sm text-slate-400 md:flex-row md:items-center md:justify-between"><div>FlightVsLight.com • A simple standalone web tool for comparing flight paths with daylight and darkness.</div><div className="flex gap-4"><Link href="/tool" className="hover:text-white">Tool</Link><Link href="/faq" className="hover:text-white">FAQ</Link></div></div></footer>}
